@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: 'postgres:18'
+    environment:
+      - 'POSTGRES_DB=banvia'
+      - 'POSTGRES_USER=banvia'
+      - 'POSTGRES_PASSWORD=banvia'
+    ports:
+      - '55432:5432'
+  redis:
+    image: 'redis:8'
+    ports:
+      - '56379:6379'
